@@ -12,7 +12,6 @@ async fn main()
     let port = "4444";
     let app = Router::new()
         .route("/", get(index))
-        .route("/more-content", get(more_content))
         .fallback(error_handler)
         .nest("/public", routes::serve_static_files());
 
