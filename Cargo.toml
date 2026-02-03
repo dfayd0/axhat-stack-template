@@ -1,19 +1,15 @@
 [package]
-name = "axhat-stack-template"
+name = "portfolio"
 version = "0.1.0"
 edition = "2021"
 build = "build.rs"
 
 [dependencies]
 askama = "0.12.1"
+askama_axum = "0.4.0"
 axum = "0.7.5"
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 tracing = "0.1.40"
 tracing-subscriber = "0.3.18"
-askama_axum = "0.4.0"
 tower-http = { version = "0.5.2", features = ["fs"] }
-async-trait = "0.1"
-lazy_static = "1.4.0"
-markdown = "1.0.0-alpha.17"
-scraper = "0.12.0"
