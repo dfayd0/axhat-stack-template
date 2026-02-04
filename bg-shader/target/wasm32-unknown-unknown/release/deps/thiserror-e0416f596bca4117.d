@@ -1,0 +1,14 @@
+/home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/deps/thiserror-e0416f596bca4117.d: /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/build/thiserror-8126ecb68fd92406/out/private.rs
+
+/home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/deps/libthiserror-e0416f596bca4117.rlib: /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/build/thiserror-8126ecb68fd92406/out/private.rs
+
+/home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/deps/libthiserror-e0416f596bca4117.rmeta: /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/build/thiserror-8126ecb68fd92406/out/private.rs
+
+/home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs:
+/home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs:
+/home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs:
+/home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs:
+/home/x/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs:
+/home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/build/thiserror-8126ecb68fd92406/out/private.rs:
+
+# env-dep:OUT_DIR=/home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/build/thiserror-8126ecb68fd92406/out
