@@ -1,6 +1,7 @@
 use axum::{routing::get, Router};
 
 use crate::routes::*;
+mod blog;
 mod routes;
 mod templates;
 
@@ -8,10 +9,15 @@ mod templates;
 async fn main()
 {
     tracing_subscriber::fmt::init();
+    blog::load_posts();
+
     let address = "0.0.0.0".to_owned();
     let port = "4444";
     let app = Router::new()
         .route("/", get(index))
+        .route("/blog", get(blog_index))
+        .route("/blog/latest", get(latest_posts))
+        .route("/blog/{slug}", get(blog_post))
         .fallback(error_handler)
         .nest("/public", routes::serve_static_files());
 

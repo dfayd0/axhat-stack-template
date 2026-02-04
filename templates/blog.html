@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Blog | {{ title }}{% endblock %}
+
+{% block content %}
+<div class="min-h-screen">
+
+    <!-- Header -->
+    <section class="py-16 px-6">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-4xl font-bold tracking-tight mb-4">Blog</h1>
+            <p class="text-neutral-400">Notes on Rust, systems programming, and security.</p>
+        </div>
+    </section>
+
+    <!-- Tags -->
+    {% if !tags.is_empty() %}
+    <section class="px-6 pb-8">
+        <div class="max-w-2xl mx-auto flex flex-wrap gap-2">
+            <a href="/blog"
+               class="text-xs px-3 py-1 rounded-full transition-colors {% if active_tag.is_none() %}bg-neutral-100 text-neutral-900{% else %}bg-neutral-800 text-neutral-400 hover:text-neutral-200{% endif %}">
+                All
+            </a>
+            {% for tag in &tags %}
+            <a href="/blog?tag={{ tag }}"
+               class="text-xs px-3 py-1 rounded-full transition-colors {% if active_tag.as_deref() == Some(tag.as_str()) %}bg-neutral-100 text-neutral-900{% else %}bg-neutral-800 text-neutral-400 hover:text-neutral-200{% endif %}">
+                {{ tag }}
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Posts -->
+    <section class="px-6 pb-20">
+        <div class="max-w-2xl mx-auto space-y-8">
+            {% for post in &posts %}
+            <article class="group">
+                <a href="/blog/{{ post.slug }}" class="block hover:bg-neutral-900/50 rounded-lg p-4 -m-4 transition-all duration-300">
+                    <div class="flex items-baseline justify-between mb-2">
+                        <h2 class="text-lg font-medium group-hover:text-white transition-colors">{{ post.title }}</h2>
+                        <time class="text-sm text-neutral-500 shrink-0 ml-4">{{ post.date.format("%b %d, %Y") }}</time>
+                    </div>
+                    <p class="text-neutral-400 text-sm mb-2">{{ post.summary }}</p>
+                    {% if !post.tags.is_empty() %}
+                    <div class="flex gap-2">
+                        {% for tag in &post.tags %}
+                        <span class="text-xs text-neutral-500">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </a>
+            </article>
+            {% endfor %}
+
+            {% if posts.is_empty() %}
+            <p class="text-neutral-500">No posts yet.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-neutral-800">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-sm text-neutral-600">&copy; 2026</p>
+        </div>
+    </footer>
+
+</div>
+{% endblock %}

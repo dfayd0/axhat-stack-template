@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | {{ title }}{% endblock %}
+
+{% block content %}
+<div class="min-h-screen">
+
+    <!-- Post -->
+    <article class="py-16 px-6">
+        <div class="max-w-2xl mx-auto">
+            <header class="mb-12">
+                <h1 class="text-3xl font-bold tracking-tight mb-4">{{ post.title }}</h1>
+                <div class="flex items-center gap-4 text-sm text-neutral-500">
+                    <time>{{ post.date.format("%B %d, %Y") }}</time>
+                    {% if !post.tags.is_empty() %}
+                    <span class="text-neutral-700">|</span>
+                    <div class="flex gap-2">
+                        {% for tag in &post.tags %}
+                        <a href="/blog?tag={{ tag }}" class="hover:text-neutral-300 transition-colors">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </header>
+
+            <div class="prose max-w-none">
+                {{ post.html_content|safe }}
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-neutral-800">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-sm text-neutral-600">&copy; 2026</p>
+        </div>
+    </footer>
+
+</div>
+{% endblock %}
