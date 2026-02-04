@@ -4,13 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="/public/tailwind_generated.css" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <title>{% block title %}{{ title }}{% endblock %}</title>
 </head>
 
-<body class="bg-neutral-950 text-neutral-100 font-sans antialiased">
-    {% block content %}{% endblock %}
+<body class="bg-neutral-950 text-neutral-100 antialiased">
+    <!-- Background canvas -->
+    <canvas id="bg-canvas" class="fixed inset-0 w-full h-full" style="z-index: -1;"></canvas>
+
+    {% block nav %}
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-800/50">
+        <div class="max-w-2xl mx-auto px-6 py-4 flex items-center justify-end">
+            <div class="flex gap-6 text-sm">
+                <a href="/#projects" class="text-neutral-500 hover:text-neutral-200 transition-colors">Projects</a>
+                <a href="/blog" class="text-neutral-500 hover:text-neutral-200 transition-colors">Blog</a>
+                <a href="/#contact" class="text-neutral-500 hover:text-neutral-200 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+    <div class="pt-14 relative">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Background shader -->
+    <script defer src="/public/bg.js"></script>
 </body>
 
 </html>

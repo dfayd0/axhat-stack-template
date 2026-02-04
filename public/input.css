@@ -1,2 +1,124 @@
 @import "tailwindcss";
 @source "../templates";
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in animation for HTMX-loaded content */
+.htmx-added {
+    opacity: 0;
+}
+.htmx-settling {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+/* Blog post prose styling */
+.prose {
+    line-height: 1.75;
+}
+.prose h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--color-neutral-100);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.prose h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--color-neutral-100);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+.prose p {
+    color: var(--color-neutral-300);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+.prose a {
+    color: var(--color-neutral-200);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.prose a:hover {
+    color: var(--color-white);
+}
+.prose strong {
+    color: var(--color-neutral-100);
+    font-weight: 600;
+}
+.prose em {
+    color: var(--color-neutral-300);
+}
+.prose code {
+    color: var(--color-neutral-200);
+    background-color: var(--color-neutral-800);
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+.prose pre {
+    background-color: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-800);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+}
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.875rem;
+    color: var(--color-neutral-300);
+}
+.prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.prose ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.prose li {
+    color: var(--color-neutral-300);
+    margin-bottom: 0.5rem;
+}
+.prose blockquote {
+    border-left: 3px solid var(--color-neutral-700);
+    padding-left: 1rem;
+    color: var(--color-neutral-400);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+.prose hr {
+    border-color: var(--color-neutral-800);
+    margin: 2rem 0;
+}
+.prose table {
+    width: 100%;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+}
+.prose th {
+    color: var(--color-neutral-300);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-neutral-700);
+}
+.prose td {
+    color: var(--color-neutral-400);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-neutral-800);
+}
