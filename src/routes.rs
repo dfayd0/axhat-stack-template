@@ -1,6 +1,6 @@
-use axum::{http::StatusCode, response::Html, Router};
+use askama::Template;
+use axum::{http::StatusCode, response::{Html, IntoResponse}, Router};
 use tower_http::services::ServeDir;
-use askama_axum::{IntoResponse, Template};
 
 use crate::templates::*;
 
@@ -16,7 +16,7 @@ pub async fn index() -> impl IntoResponse
 
 pub fn serve_static_files() -> Router
 {
-    Router::new().nest_service("/", ServeDir::new("public"))
+    Router::new().fallback_service(ServeDir::new("public"))
 }
 
 pub async fn error_handler() -> impl IntoResponse
