@@ -50,8 +50,8 @@
                         Media aggregation system that scrapes content from multiple services
                         and creates a unified dashboard for sports, entertainment, and news.
                     </p>
-                    <a href="#" class="text-sm text-neutral-500 hover:text-neutral-300 hover:translate-x-1 inline-block transition-all">
-                        View on GitHub →
+                    <a href="https://github.com/dfayd0" class="text-sm text-neutral-500 hover:text-neutral-300 hover:translate-x-1 inline-block transition-all">
+                        View on GitHub &rarr;
                     </a>
                 </article>
 
@@ -64,8 +64,8 @@
                         Web application template combining Axum, HTMX, Askama, and Tailwind.
                         Build reactive websites without writing JavaScript.
                     </p>
-                    <a href="#" class="text-sm text-neutral-500 hover:text-neutral-300 hover:translate-x-1 inline-block transition-all">
-                        View on GitHub →
+                    <a href="https://github.com/dfayd0/axhat-stack-template" class="text-sm text-neutral-500 hover:text-neutral-300 hover:translate-x-1 inline-block transition-all">
+                        View on GitHub &rarr;
                     </a>
                 </article>
 
@@ -78,10 +78,27 @@
                         Collection of scripts and utilities for capture-the-flag competitions.
                         Includes crypto solvers, web exploitation tools, and forensics helpers.
                     </p>
-                    <a href="#" class="text-sm text-neutral-500 hover:text-neutral-300 hover:translate-x-1 inline-block transition-all">
-                        View on GitHub →
+                    <a href="https://github.com/dfayd0" class="text-sm text-neutral-500 hover:text-neutral-300 hover:translate-x-1 inline-block transition-all">
+                        View on GitHub &rarr;
                     </a>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="py-20 px-6 border-t border-neutral-800">
+        <div class="max-w-2xl mx-auto">
+            <div class="flex items-baseline justify-between mb-8">
+                <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider hover:text-neutral-400 transition-colors">Latest Posts</h2>
+                <a href="/blog" class="text-sm text-neutral-500 hover:text-neutral-300 transition-colors">View all &rarr;</a>
+            </div>
+
+            <div id="latest-posts"
+                 hx-get="/blog/latest"
+                 hx-trigger="load"
+                 hx-swap="innerHTML">
+                <div class="text-neutral-600 text-sm">Loading posts...</div>
             </div>
         </div>
     </section>
@@ -120,10 +137,7 @@
             <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-8 hover:text-neutral-400 transition-colors">Contact</h2>
 
             <div class="flex gap-8 text-sm">
-                <a href="mailto:louis@example.com" class="text-neutral-400 hover:text-neutral-100 hover:underline underline-offset-4 transition-colors">
-                    Email
-                </a>
-                <a href="https://github.com" class="text-neutral-400 hover:text-neutral-100 hover:underline underline-offset-4 transition-colors">
+                <a href="https://github.com/dfayd0" class="text-neutral-400 hover:text-neutral-100 hover:underline underline-offset-4 transition-colors">
                     GitHub
                 </a>
                 <a href="https://linkedin.com" class="text-neutral-400 hover:text-neutral-100 hover:underline underline-offset-4 transition-colors">
@@ -136,7 +150,7 @@
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-neutral-800">
         <div class="max-w-2xl mx-auto">
-            <p class="text-sm text-neutral-600">© 2026</p>
+            <p class="text-sm text-neutral-600">&copy; 2026</p>
         </div>
     </footer>
 
