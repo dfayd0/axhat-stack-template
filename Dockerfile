@@ -13,8 +13,8 @@ FROM debian:bookworm-slim
 
 WORKDIR /app
 COPY --from=builder /app/target/release/portfolio .
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/templates ./templates
+COPY public ./public
+COPY templates ./templates
 
 EXPOSE 4444
 
