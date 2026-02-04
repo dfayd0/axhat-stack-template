@@ -1,4 +1,2 @@
 # flyctl launch added from .gitignore
 target
-**/public/tailwind_generated.css
-fly.toml
