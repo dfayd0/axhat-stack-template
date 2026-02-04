@@ -1,1 +1,0 @@
-/home/x/ghub/axhat-stack-template/bg-shader/target/wasm32-unknown-unknown/release/bg_shader.wasm: /home/x/ghub/axhat-stack-template/bg-shader/src/lib.rs /home/x/ghub/axhat-stack-template/bg-shader/src/shader.wgsl
